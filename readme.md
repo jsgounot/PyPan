@@ -1,10 +1,3 @@
----
-title: PyPan
-tags: [Github, Notebooks, Python]
-created: '2019-01-28T09:54:16.863Z'
-modified: '2019-06-12T13:36:23.416Z'
----
-
 # PyPan
 
 PyPan is a python library designed for pangenome construction, using local and global alignment, Augustus and SNAP for gene predictions, and a graph based method for genes clustering. PyPan takes assemblies and a reference sequence as inputs and automaticaly removed reference segments, predict genes from non-reference segments (NR segs) and compare new genes within a population. PyPan is designed to take advantage of multi-core system, which is a requirement for most pangenome construction.
