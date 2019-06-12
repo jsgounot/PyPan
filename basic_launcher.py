@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Author: jsgounot
-# @Date:   2019-01-22 10:40:08
-# @Last modified by:   jsgounot
-# @Last Modified time: 2019-06-12 15:35:46
-
 import argparse
 import pypan
 
