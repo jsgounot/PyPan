@@ -197,3 +197,9 @@ def pipeline() :
 ## Some notes about multiprocessing
 
 PyPan is designed for cluster analysis. This way, multiprocessing can be used in almost all parts of the pipeline. Most of the multicore use is done when blast and global alignment are done and are carried by the PyBlast library. [Look at the specific github for more informations](https://github.com/jsgounot/PyBlast).
+
+## Supplemental codes
+
+### Saturation curve
+
+In the supplemental directory, you can found a python script to generate data for the saturation curve analysis. The script can be used with the [fire](https://github.com/google/python-fire) CLI. Two functions are available, one which will transform your groups.json file to a matrix (tsv) file. An other which can use one or multiple tsv files and produce the distribution data. Type `python saturation.py` for more informations.
