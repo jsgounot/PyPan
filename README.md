@@ -203,3 +203,15 @@ PyPan is designed for cluster analysis. This way, multiprocessing can be used in
 ### Saturation curve
 
 In the supplemental directory, you can found a python script to generate data for the saturation curve analysis. The script can be used with the [fire](https://github.com/google/python-fire) CLI. Two functions are available, one which will transform your groups.json file to a matrix (tsv) file. An other which can use one or multiple tsv files and produce the distribution data. Type `python saturation.py` for more informations.
+
+First you can transform your `groups.json` file into a tsv matrix file :
+
+```python saturation.py json2tsv groups.json```
+
+This function will produce a tsv file in the same directory. You can specify an outfile using the `outfile` option (see `python saturation.py json2tsv --help`)
+
+After that, you can calculate the potential distribution of your core and pan genome using this function :
+
+```python saturation.py saturation "/path/to/your/*.tsv" outfile --ncore 4```
+
+Note than you can provide any files which are similar to the matrix file produced by the previous function, including the one done using [CFreecW](https://github.com/jsgounot/CFreecW#cnv-matrix). This operation can take time depending of your sample size and the number of combinations you ask. Once done, you have all the file requiered to produce a saturation curve, you can look at this [jupyter notebook](https://github.com/jsgounot/PyPan/blob/master/supplementals/saturation_curve.ipynb) for a practical example.
